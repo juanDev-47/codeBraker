@@ -6,5 +6,8 @@ const router = express.Router();
 
 router.get("/", codeBreakerController.playCodeBreaker);
 
+router.post("/", codeBreakerController.playCodeBreaker);
+
+router.get("/health", codeBreakerController.healthCheck);
 
 export default router;

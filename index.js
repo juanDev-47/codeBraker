@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import codeBreaker from "./api/routes/codeBreaker.js";
+import cors from "cors";
 
 // for no using this way, put in package.json a tag => "type": "module"
 // const express = require('express');
@@ -11,6 +12,9 @@ dotenv.config();
 
 
 const app = express();
+
+// enable cors
+app.use(cors());
 
 app.use(express.json({limit: "60mb"}));
 
